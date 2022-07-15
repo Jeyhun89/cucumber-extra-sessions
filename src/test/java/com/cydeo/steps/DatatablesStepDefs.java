@@ -1,14 +1,19 @@
 package com.cydeo.steps;
 
+import com.cydeo.pages.AdidasPage;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.pages.VyTrackHomePage;
 import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
 import java.util.Map;
+
 
 public class DatatablesStepDefs {
 
@@ -53,5 +58,24 @@ public class DatatablesStepDefs {
 
         Assert.assertEquals(expectedUserInfo,actualUserInfo);
 
+    }
+
+
+
+    @Then("User should be able to see following names in their groups")
+    public void user_should_be_able_to_see_following_names_in_their_groups(Map<String,List<String>> mapOfList) {
+
+        List<String> group1 = mapOfList.get("Group1");
+        System.out.println(group1);
+
+        System.out.println("============");
+
+        List<String> group2 = mapOfList.get("Group2");
+        System.out.println(group2);
+
+        System.out.println("============");
+
+        List<String> group3 = mapOfList.get("Group3");
+        System.out.println(group3);
     }
 }

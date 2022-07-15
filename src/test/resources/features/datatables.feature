@@ -26,18 +26,18 @@ Feature: Examples for DataTable
       | System             |
 
 
-  @wip
   Scenario: Login with given information
     Given user is on the login page
     When user enters below credentials
-      | username | user10      |
-      | password | UserUser123 |
+  | username | user10      |
+  | password | UserUser123 |
     Then user should be able to see folllowing information
-      | firstname | John |
-      | lastname  | Doe  |
+  | firstname | John |
+  | lastname  | Doe  |
 
 
 # DataTable - ListOfMap
+  @smoke
   Scenario: verify each product price
     Given User is on the HomePage
     Then User should be able to see expected prices in following products
@@ -54,7 +54,7 @@ Feature: Examples for DataTable
 
 
 
-
+ @smoke
   Scenario: verify each product price listOfList
     Given User is on the HomePage
     Then User should be able to see expected prices in following products with listOflist
